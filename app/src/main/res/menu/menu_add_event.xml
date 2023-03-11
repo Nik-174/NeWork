@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/geo"
+        android:title="@string/geo" />
+    <item
+        android:id="@+id/link"
+        android:title="@string/link"/>
+    <item
+        android:id="@+id/photoVideo"
+        android:title="@string/photo_video"/>
+    <item
+        android:id="@+id/speaker"
+        android:title="@string/speakers"/>
+    <item
+        android:id="@+id/date"
+        android:title="@string/date"/>
+</menu>

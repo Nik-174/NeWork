@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/audio"
+        android:title="@string/audio" />
+    <item
+        android:id="@+id/image"
+        android:title="@string/images"/>
+    <item
+        android:id="@+id/video"
+        android:title="@string/video"/>
+</menu>

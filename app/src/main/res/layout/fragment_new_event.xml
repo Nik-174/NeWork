@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ru.netology.nework.fragment.NewEventFragment">
+
+
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        app:layout_anchor="@+id/edit"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:hint="@string/content"
+        app:layout_constraintTop_toBottomOf="@+id/mentionIds"
+        android:autoLink="web"
+        android:linksClickable="true"
+        tools:ignore="Autofill" />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+        />
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/speakersIds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/card_ids"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="60dp"
+        />
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/double_spacing"
+        android:clickable="true"
+        android:contentDescription="@string/add_post"
+        android:focusable="true"
+        android:layout_gravity="bottom|end"
+        app:srcCompat="@drawable/ic_baseline_check_24"
+        android:backgroundTint="@color/white"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/menuAdd"
+        style="@style/Widget.AppTheme.CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:paddingBottom="8dp"
+        android:contentDescription="@string/description_add_menu"
+        android:checkable="true"
+        app:icon="@drawable/ic_add_24dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mentionAdd"
+        style="@style/Widget.AppTheme.CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:paddingBottom="8dp"
+        android:layout_marginStart="50dp"
+        android:contentDescription="@string/description_add_menu"
+        app:icon="@drawable/ic_speaker_24"
+        android:checkable="true"
+        tools:ignore="RtlSymmetry" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/geoAdd"
+        style="@style/Widget.AppTheme.CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="100dp"
+        android:paddingBottom="8dp"
+        android:contentDescription="@string/description_add_menu"
+        android:checkable="true"
+        app:icon="@drawable/ic_add_location_24" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/linkAdd"
+        style="@style/Widget.AppTheme.CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="150dp"
+        android:paddingBottom="8dp"
+        android:checkable="true"
+        android:contentDescription="@string/description_add_menu"
+        app:icon="@drawable/ic_add_link_24" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/dateTime"
+        style="@style/Widget.AppTheme.CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="200dp"
+        android:paddingBottom="8dp"
+        android:checkable="true"
+        android:contentDescription="@string/description_add_menu"
+        app:icon="@drawable/ic_baseline_calendar_month_24" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/type"
+        style="@style/Widget.AppTheme.CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="250dp"
+        android:paddingBottom="8dp"
+        android:checkable="true"
+        android:contentDescription="@string/description_add_menu"
+        app:icon="@drawable/ic_online_32" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:checkable="true"
+        android:layout_width="100dp"
+        android:layout_height="52dp"
+        android:paddingEnd="8dp"
+        android:layout_gravity="bottom|right"
+        tools:ignore="ContentDescription,RtlHardcoded,RtlSymmetry" />
+
+
+
+    <EditText
+        android:id="@+id/editLink"
+        android:layout_width="170dp"
+        android:layout_height="36dp"
+        android:inputType="textPostalAddress"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="95dp"
+        android:visibility="gone"
+        tools:ignore="Autofill" />
+
+    <Button
+        android:id="@+id/okAdd"
+        android:layout_width="100dp"
+        android:layout_height="@dimen/ava_size"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="100dp"
+        android:text="@string/add"
+        android:visibility="gone"
+        android:textSize="8sp"
+        tools:ignore="RtlHardcoded,SmallSp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
